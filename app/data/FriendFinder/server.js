@@ -14,7 +14,15 @@ app.use(express.json());
 require("./routing/apiRoutes")(app);
 require("./routing/htmlRoutes")(app);
 
-
+module.exports = function(app) {
+  app.get('/' , function (req,res){
+    res.json(friends);
+  });
+  
+  app.get('/survey', function(req,res) {
+    res.json(survey);
+  });
+};
 // starts server to begin listening 
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
