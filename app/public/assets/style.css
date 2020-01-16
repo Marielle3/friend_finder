@@ -1,0 +1,185 @@
+
+/* body stylings */
+
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  background: url(./images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+
+/* homepage stylings */
+h1 {
+  font-family: 'Cinzel', serif;
+}
+
+.topText {
+  font-family: 'Cinzel', serif;
+}
+
+.header {
+  margin-top: 2.5%;
+  font-size: 42px;
+}
+
+nav {
+  background-color: rgb(143, 117, 117);
+}
+
+#footerHome {
+  margin-top: 7vh;
+}
+
+.homeContainer {
+  margin-top: 5vh;
+  width: 65vw;
+  background-color: rgba(180, 147, 147, 0.8);
+}
+
+.surveyBtn {
+  margin-bottom: 2.5%;
+}
+
+.homeText {
+  font-size: 20px;
+  padding: 0.5rem;
+}
+
+.mainp {
+  font-size: 22px;
+  padding: 2.5%;
+}
+
+/* survey page stylings */
+.surveyContainer {
+  margin-top: 5vh;
+  width: 65vw;
+  background-color: rgba(0,0,0,0.8);
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 4%;
+}
+
+.surveyHeader {
+  margin-top: 2.5%;
+  font-size: 30px;
+  padding-left: 17%;
+  padding-right: 17%;
+}
+
+.surveyFooter {
+  margin-top: 2.5vh;
+}
+
+h4 {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.surveyContainer label {
+  font-size: 20px;
+}
+
+.modal-title, #userMatch {
+  color: black;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#userMatchPhoto {
+  max-width: 350px;
+  height: auto;
+}
+
+/* media queries for added responsiveness */
+@media only screen and (max-width:768px) {
+  .homeContainer {
+      margin-top: 3.5vh;
+      width: 80vw;
+  }
+
+  .header {
+      font-size: 36px;
+  }
+
+  .mainp {
+      font-size: 20px;
+  }
+
+  .homeText {
+      font-size: 18px;
+  }
+
+  #footerHome {
+      margin-top: 6.5vh;
+  }
+
+  .surveyContainer {
+      width: 80vw;
+  }
+
+  .surveyHeader {
+      font-size: 24px;
+      padding-left: 10%;
+      padding-right: 10%;
+  }
+
+  .surveyContainer label {
+      font-size: 18px;
+  }
+
+  .surveyFooter {
+      margin-top: 2.5vh;
+      margin-bottom: 1.5vh;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .homeContainer {
+      margin-top: 2.5vh;
+      width: 90.5vw;
+  }
+
+  .header {
+      font-size: 32px;
+  }
+
+  .mainp {
+      font-size: 18px;
+  }
+
+  .homeText {
+      font-size: 16px;
+  }
+
+  #footerHome {
+      margin-top: 5.5vh;
+  }
+
+  .surveyContainer {
+      width: 90.5vw;
+  }
+
+  .surveyHeader {
+      font-size: 22px;
+      padding-left: 7.5%;
+      padding-right: 7.5%;
+  }  
+
+  .surveyContainer label {
+      font-size: 16px;
+  }
+
+  .surveyFooter {
+      margin-top: 2.5vh;
+      margin-bottom: 1.5vh;
+  }
+}
+

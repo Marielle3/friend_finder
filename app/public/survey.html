@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Fur-Friend Finder!</title>
+  </head>
+  <body>
+    <h1 class="text-center topText surveyHeader">
+      Fill out all forms before finding your Furry Friend
+    </h1>
+
+    <!-- container for main survey page content -->
+    <div class="container surveyContainer border border-info rounded">
+      <h4>Your Name:</h4>
+      <input type="text" id="name" class="form-control" required />
+
+      <h4>Link to a photo, They would like to see their friend too</h4>
+      <input type="text" id="photo" class="form-control" required />
+
+      <hr />
+
+      <body>
+        <h1>Find a Fur-Friend</h1>
+
+        <!--Survey questions-->
+        <div class="form-group">
+          <label for="q1"
+            >You are an early bird that likes to get the worm?</label
+          >
+          <select class="form-control" id="q1">
+            <option>1 (strongly agree)</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5 (strongly disagree)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q2">You consider yourself an introvert</label>
+          <select class="form-control" id="q2">
+            <option>Strongly agree</option>
+            <option>Agree</option>
+            <option>Sort of</option>
+            <option>Disagree</option>
+            <option>Strongly Disagree</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q3">You love coarse hair</label>
+          <select class="form-control" id="q3">
+            <option>Strongly agree</option>
+            <option>Agree</option>
+            <option>Sort of</option>
+            <option>Disagree</option>
+            <option>Strongly Disagree</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q4"
+            >You are all about moving your body and frolicking in the
+            fields</label
+          >
+          <select class="form-control" id="q4">
+            <option>Strongly agree</option>
+            <option>Agree</option>
+            <option>Sort of</option>
+            <option>Disagree</option>
+            <option>Strongly Disagree</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q5"
+            >You would rather be in the mountains rather than the beach</label
+          >
+          <select class="form-control" id="q5">
+            <option>Strongly agree</option>
+            <option>Agree</option>
+            <option>Sort of</option>
+            <option>Disagree</option>
+            <option>Strongly Disagree</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q6">Carnivore over Vegeterian</label>
+          <select class="form-control" id="q6">
+            <option>Strongly agree</option>
+            <option>Agree</option>
+            <option>Sort of</option>
+            <option>Disagree</option>
+            <option>Strongly Disagree</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q7">You love cuddles</label>
+          <select class="form-control" id="q7">
+            <option>Strongly agree</option>
+            <option>Agree</option>
+            <option>Sort of</option>
+            <option>Disagree</option>
+            <option>Strongly Disagree</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q8">You love to bring home a new toy every weekend</label>
+          <select class="form-control" id="q8">
+            <option>Strongly agree</option>
+            <option>Agree</option>
+            <option>Sort of</option>
+            <option>Disagree</option>
+            <option>Strongly Disagree</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q9">Hygiene is very important</label>
+          <select class="form-control" id="q9">
+            <option>Strongly agree</option>
+            <option>Agree</option>
+            <option>Sort of</option>
+            <option>Disagree</option>
+            <option>Strongly Disagree</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q10">You would love to have kids one day</label>
+          <select class="form-control" id="q10">
+            <option>Strongly agree</option>
+            <option>Agree</option>
+            <option>Sort of</option>
+            <option>Disagree</option>
+            <option>Strongly Disagree</option>
+          </select>
+        </div>
+
+        <br />
+
+        <button
+          type="submit"
+          class="btn btn-outline-info btn-lg btn-block"
+          id="submit"
+        >
+          <i class="fa fa-child" aria-hidden="true"></i> YAY FOR FURRY FRIENDS
+          <i class="fa fa-child" aria-hidden="true"></i>
+        </button>
+
+        <br />
+
+        <!-- footer with links to the friends list in JSON format and the github repo -->
+        <footer>
+          <div class="container center surveyFooter">
+            <p class="text-center">
+              <a href="/api/friends"
+                ><button type="button" class="btn btn-outline-info">
+                  API Friends List
+                </button></a
+              >
+              <a href="https://github.com/Marielle3/friend_finder"
+                ><button type="button" class="btn btn-outline-info">
+                  GitHub Repo
+                </button></a
+              >
+            </p>
+          </div>
+        </footer>
+
+        <!-- Modal popup that triggers when user presses submit button and presents them with their best match-->
+        <div id="matchModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title text-center">
+                  Found out last.. 
+                </h2>
+              </div>
+              <div class="modal-body">
+                <h2 id="userMatch" class="text-center"></h2>
+                <img
+                  id="userMatchPhoto"
+                  class="rounded mx-auto d-block"
+                  src="#"
+                />
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="btn btn-info"
+                  class="btn btn-outline-info"
+                  data-dismiss="modal"
+                >
+                  See ya later!
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <script type="text/javascript">
+        
+      // jQuery click listener to gather submission data from user responses to survey questions 
+      $("#submit").on("click", function(event) {
+      event.preventDefault();
+  
+      // Conditional for form validation checks for any empty input areas, which will set my formCompleted variable to false
+      var formCompleted = true;
+
+      if ($("#name").val() === "" || $("#photo").val() === "" || $("#q1").val() === "" || $("#q2").val() === "" || $("#q3").val() === "" || $("#q4").val() === "" || $("#q5").val() === "" || $("#q6").val() === "" || $("#q7").val() === "" || $("#q8").val() === "" || $("#q9").val() === "" || $("#q10").val() === "") {
+          formCompleted = false;
+      }
+
+      if (formCompleted) {
+
+          // Grab all survey responses and store them in an object
+          var newFriend = {
+              name: $("#name").val().trim(),
+              photo: $("#photo").val().trim(),
+              responses: [
+                  $("#q1").val(),
+                  $("#q2").val(),
+                  $("#q3").val(),
+                  $("#q4").val(),
+                  $("#q5").val(),
+                  $("#q6").val(),
+                  $("#q7").val(),
+                  $("#q8").val(),
+                  $("#q9").val(),
+                  $("#q10").val()
+              ]
+          };
+      
+          console.log(newFriend);
+
+          // Post request for the newFriend object that also returns data from about their best match calculated on the apiRoutes.js
+          $.post("/api/friends", newFriend, function(data) {
+                  // Trigger my modal popup with info about the match found for the user
+                  $("#userMatch").html(data.name);
+                  $("#userMatchPhoto").attr("src", data.photo);
+                  $("#matchModal").modal("toggle");
+              });
+      } else {
+          // Alert user if they failed to respond to all form elements
+          alert("Please complete all fields before finding a friend");
+      }
+      });
+  
+  </script>
+  </body>
+</html>
